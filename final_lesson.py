@@ -82,7 +82,7 @@ while running:
         #instantiate the player rectangle and then if it hits the obstacle rect, print collision detected
         # Draw player
         player_img = pygame.image.load("player.png").convert_alpha()
-        player_img = pygame.transform.scale(player_img, (50, 50))  # same size as the rectangle
+        player_img = pygame.transform.scale(player_img, (100, 100))  # same size as the rectangle
         player_rect = player_img.get_rect(topleft=(player_x, player_y))
         screen.blit(player_img, (player_x, player_y))    
         #check collisions, decrement score if it happens
@@ -108,11 +108,6 @@ while running:
                 blocks[i] = create_block()
 
 
-    for block in blocks:
-        enemy_img = pygame.image.load("enemy.png").convert_alpha()
-        enemy_img = pygame.transform.scale(enemy_img, (block_size, block_size))  # same size as the rectangle
-        block_rect = enemy_img.get_rect(topleft=(block[0], block[1]))
-        screen.blit(enemy_img, (block[0], block[1]))
     
     if game_over:
             game_over_text = font.render("GAME OVER", True, (255, 0, 0))
