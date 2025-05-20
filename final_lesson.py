@@ -125,8 +125,7 @@ while running:
                 score = 0
                 lives = 3
                 blocks = [create_block() for _ in range(num_blocks)]
-                #player_x = screen_width // 2 - player_width // 2
-                #player_y = screen_height - player_height - 10
+
                 game_over = False
             elif keys[pygame.K_q]:
                 pygame.quit()
